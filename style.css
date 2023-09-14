@@ -17,7 +17,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: lightsalmon;
+    background-image: url('images/sidebar-bkg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
     width: 40vw;  
   }
 
@@ -26,25 +29,36 @@
     flex-direction: row;
     justify-content: center;
     background-color: gray;
+    opacity: 0.6;
     width: 40vw;  
     height: 4rem;
     margin-top: 25vh;
   }
 
   .sidebar-logo-img {
-    border: 1px solid black;
+    color: white;
     margin: auto;
     flex-grow: 1;
   }
 
   .sidebar-logo-text {
-    border: 1px solid black;  
+    color: white; 
+    font-size: 1.5rem;
+    font-weight: bold; 
     margin: auto;
     flex-grow: 1;  
   }
 
   .sidebar-bg-img-attribution {
     margin-bottom: 1vh;
+    background-color: gray;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+
+  .sidebar-bg-img-attribution, a {
+    color: black; 
+    text-decoration: none;
   }
 
   .form-container {
