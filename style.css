@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
   }
   
   .page-container {
@@ -19,8 +20,8 @@
     align-items: center;
     background-image: url('images/sidebar-bkg.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
+    background-attachment: scroll;
+    background-size: cover;
     width: 40vw;  
   }
 
@@ -28,8 +29,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: gray;
-    opacity: 0.6;
+    background-color: black;
+    opacity: 0.5;
     width: 40vw;  
     height: 4rem;
     margin-top: 25vh;
@@ -51,37 +52,47 @@
 
   .sidebar-bg-img-attribution {
     margin-bottom: 1vh;
-    background-color: gray;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
     font-size: 0.8rem;
-    opacity: 0.6;
   }
 
   .sidebar-bg-img-attribution, a {
-    color: black; 
+    color: white; 
     text-decoration: none;
   }
 
   .form-container {
     display: flex;
     flex-direction: column;
-    background-color: lightsalmon;
+    background-color: lightsalmon; 
+    /* bg-color debugging only - remove */
     width: 60vw;
   }
 
   .form-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     background-color: lightblue;
     flex-grow: 1;
-    flex-basis: auto;
+    /* flex-basis: auto; */
+  }
+
+  .form-header, .srv-text {
+    padding-left: 10px;
   }
 
   .form-inputs {
     background-color: lightgreen;
     flex-grow: 1;
-    flex-basis: auto;  
+    /* flex-basis: auto;   */
   }
 
   .form-submit {
     background-color: beige;
     flex-grow: 1;
-    flex-basis: auto;
+    /* flex-basis: auto; */
   }
