@@ -28,26 +28,30 @@
   .sidebar-logo {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     background-color: black;
     opacity: 0.5;
-    width: 40vw;  
-    height: 4rem;
+    width: 40vw; 
+    min-height: 20vh;
+    /* min-height: 8rem; */
     margin-top: 25vh;
   }
 
   .sidebar-logo-img {
     color: white;
-    margin: auto;
     flex-grow: 1;
+    margin: 2rem;
+    max-height: 10vh;
   }
 
   .sidebar-logo-text {
     color: white; 
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold; 
     margin: auto;
-    flex-grow: 1;  
+    text-align: center;
+    flex-grow: 1; 
   }
 
   .sidebar-bg-img-attribution {
@@ -59,6 +63,7 @@
   }
 
   .sidebar-bg-img-attribution, a {
+    font-size: 0.75rem;
     color: white; 
     text-decoration: none;
   }
