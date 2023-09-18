@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-size: 16px;
   }
+
+  :root {
+    --form-bg-color: rgb(245, 245, 245);
+    --form-indent: 2.5vw;
+  }
   
   .page-container {
     display: flex;
@@ -34,14 +39,13 @@
     opacity: 0.5;
     width: 40vw; 
     min-height: 20vh;
-    /* min-height: 8rem; */
     margin-top: 25vh;
   }
 
   .sidebar-logo-img {
     color: white;
     flex-grow: 1;
-    margin: 2rem;
+    margin: 5vh;
     max-height: 10vh;
   }
 
@@ -50,6 +54,7 @@
     font-size: 2.5rem;
     font-weight: bold; 
     margin: auto;
+    padding: 2.5vh 0;
     text-align: center;
     flex-grow: 1; 
   }
@@ -71,8 +76,9 @@
   .form-container {
     display: flex;
     flex-direction: column;
+    gap: 3px;
     background-color: lightsalmon; 
-    /* bg-color debugging only - remove */
+    /* temp bg-color for testing only - reset to var(--form-bg-color) */
     width: 60vw;
   }
 
@@ -80,24 +86,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
-    background-color: lightblue;
+    gap: 3vh;
     flex-grow: 1;
-    /* flex-basis: auto; */
-  }
-
-  .form-header, .srv-text {
-    padding-left: 10px;
+    background-color: var(--form-bg-color);
+    padding-left: var(--form-indent);
+    box-shadow: 0px 3px 3px rgb(190, 190, 190);
   }
 
   .form-inputs {
-    background-color: lightgreen;
     flex-grow: 1;
-    /* flex-basis: auto;   */
+    background-color: rgb(250, 250, 250);
+    padding-top: 1vh;
+    padding-left: var(--form-indent);
+    box-shadow: 0px 3px 3px rgb(190, 190, 190);
   }
 
   .form-submit {
-    background-color: beige;
     flex-grow: 1;
-    /* flex-basis: auto; */
+    background-color: var(--form-bg-color);
+    padding-top: 2vh;
+    padding-left: var(--form-indent);
   }
