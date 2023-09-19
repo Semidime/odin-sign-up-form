@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: none;
+  outline: none;
   font-size: 24px;
   font-family: Raleway, orbitron, sans-serif;
 }
@@ -123,6 +125,8 @@
 
 .form-inputs input {
   width: clamp(150px, 20vw, 400px);
+  border: 2px solid #E5E7EB;
+  border-radius: 5px;
 }
 
 .name-inputs,
@@ -160,6 +164,7 @@
 .form-submit p,
 .form-submit a {
   font-size: 0.7rem;
+  text-decoration: none;
 }
 
 .submit-btn {
@@ -169,3 +174,22 @@
   border: 2px solid rgb(128, 128, 128);
   box-shadow: 1px 1px;
 }
+
+.submit-btn:hover {
+  background-color: rgb(189, 215, 245);
+}
+
+/* form validation */
+
+.form-inputs input:focus {
+  border: 2px solid rgb(83, 155, 238);
+  box-shadow: 1px 1px 1px rgba(83, 155, 238, 0.774);
+  color: rgb(83, 155, 238);
+  background-color: rgb(189, 215, 245);
+
+}
+
+.form-group:focus-within label {
+  font-weight: bold;
+}
+
