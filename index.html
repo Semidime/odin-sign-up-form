@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Sign da ting</title>
 </head>
 <body>
@@ -46,11 +47,12 @@
                     <div class="password-inputs">
                         <div class="form-group">
                             <label for="password">PASSWORD *</label>
-                            <input type="password" name="user_password" id="password" minlength="6" maxlength="12" required>
+                            <input type="password" name="user_password" id="password" minlength="6" maxlength="12" placeholder="6-12 characters" required>
                         </div>
                         <div class="form-group">
-                            <label for="password_conf">CONFIRM PASSWORD *</label>
-                            <input type="password" name="user_password_conf" id="password_conf" minlength="6" maxlength="12" required>
+                            <label for="password_conf">CONFIRM PASSWORD *<span id="password-mismatch"></span></label>
+                            <input type="password" name="user_password_conf" id="password_conf" minlength="6" maxlength="12" placeholder="please re-enter password" required>
+                            
                         </div>
                     </div>
                     <div class="mailing-list">
