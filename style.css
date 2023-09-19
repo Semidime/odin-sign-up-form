@@ -124,6 +124,8 @@
 }
 
 .form-inputs input {
+  padding: 0.1rem;
+  font-size: 0.7rem;
   width: clamp(150px, 20vw, 400px);
   border: 2px solid #E5E7EB;
   border-radius: 5px;
@@ -181,15 +183,33 @@
 
 /* form validation */
 
-.form-inputs input:focus {
+.password-inputs input:invalid {
+  border: 2px solid red;
+  box-shadow: 1px 1px 1px red;
+  background-color: rgb(250, 220, 220);
+}
+
+.password-inputs input:placeholder-shown {
+  border: 2px solid #E5E7EB;
+  background-color: rgb(255,255,255);
+  box-shadow: none;
+}
+
+.form-inputs input[type="text"]:focus,
+.form-inputs input[type="email"]:focus,
+.form-inputs input[type="tel"]:focus,
+.form-inputs input[type="password"]:focus {
   border: 2px solid rgb(83, 155, 238);
   box-shadow: 1px 1px 1px rgba(83, 155, 238, 0.774);
-  color: rgb(83, 155, 238);
   background-color: rgb(189, 215, 245);
-
 }
 
 .form-group:focus-within label {
   font-weight: bold;
 }
 
+
+#password-mismatch {
+  font-size: 0.5rem;
+  color: red;
+}
