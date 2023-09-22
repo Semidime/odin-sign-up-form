@@ -189,6 +189,8 @@
   background-color: rgb(250, 220, 220);
 }
 
+/* Whitespace included in password placeholders so that invalid style not applied until user has interacted
+Specificity of this rule the same as invalid so must appear after invalidity rule*/
 .password-inputs input:placeholder-shown {
   border: 2px solid #E5E7EB;
   background-color: rgb(255,255,255);
@@ -208,8 +210,13 @@
   font-weight: bold;
 }
 
+/* override default autofill color */
+input:-webkit-autofill, input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 30px white inset; /* [this sets an inset border within the form field - blur radius covers autocomplete background] */
+  -webkit-text-fill-color: #333; /*font colour*/
+}
 
-#password-mismatch {
+#password-conf-message,
+#password-message {
   font-size: 0.5rem;
-  color: red;
 }
