@@ -4,6 +4,15 @@ const passwordMsg = document.getElementById('password-message');
 const passwordConfMsg = document.getElementById('password-conf-message');
 
 passwordInput.addEventListener("input", (event) => {
+    generatePasswordMsg();
+})
+
+passwordConfInput.addEventListener("input", (event) => {
+    generatePasswordMsg();
+})
+
+function generatePasswordMsg() {
+    // passwordMsg
     if(passwordInput.value.length < 6) {
         passwordInput.setCustomValidity("Password must be 6-12 characters");
         passwordMsg.textContent = "  Password must be 6-12 characters";
@@ -12,9 +21,8 @@ passwordInput.addEventListener("input", (event) => {
         passwordInput.setCustomValidity("");
         passwordMsg.textContent = "";
     }
-})
 
-passwordConfInput.addEventListener("input", (event) => {
+    // passwordConfMsg
     if(passwordConfInput.value.length >= 1 && passwordConfInput.value.length < passwordInput.value.length) {
         passwordConfInput.setCustomValidity("Passwords must be same length.");
         passwordConfMsg.textContent = "  Passwords must be same length.";
@@ -27,4 +35,4 @@ passwordConfInput.addEventListener("input", (event) => {
         passwordConfInput.setCustomValidity("");
         passwordConfMsg.textContent = "";
     }
-})
+}
